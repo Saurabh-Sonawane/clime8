@@ -33,7 +33,7 @@ public class QuestionnaireResource {
     @Autowired
     private QuestionnaireService questionnaireService;
 
-    @ApiOperation(value = "Get questionnaires to check eligibility for account", response = List.class)
+    @ApiOperation(value = "Get questionnaires to check eligibility for account", response = Questionnaire.class, responseContainer = "List")
     @RequestMapping(value = "/questionnaire", method = GET, produces = APPLICATION_JSON_VALUE)
     @GetMapping(value = "/questionnaire", produces = APPLICATION_JSON_VALUE)
     public List<Questionnaire> getQuestionnaire() {
